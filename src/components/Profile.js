@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Route, Link, useRouteMatch } from "react-router-dom";
+import { Route, Link, useRouteMatch, Redirect } from "react-router-dom";
 import {
   selectCurrentUser,
   selectIsLoggedIn,
@@ -13,7 +13,9 @@ export default function Profile() {
 
   let { path, url } = useRouteMatch();
 
-  // use loggedIn to return a Redirect
+  if (!loggedIn) {
+    return <Redirect to="/sign-up" />;
+  }
 
   return (
     <main>
