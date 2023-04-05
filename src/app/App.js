@@ -21,11 +21,15 @@ function App() {
           <About />
         </Route>
 
+        <Route path="/authors/:name">
+          <Author />
+        </Route>
+
         <Route path="/sign-up">
           <SignUp />
         </Route>
 
-        <Route path="/articles">
+        <Route path="/articles/:title?">
           <Articles />
         </Route>
 
