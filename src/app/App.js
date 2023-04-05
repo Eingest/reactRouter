@@ -29,8 +29,12 @@ function App() {
           <SignUp />
         </Route>
 
-        <Route path="/articles/:title?">
+        <Route path="/articles">
           <Articles />
+        </Route>
+
+        <Route path="/articles/:title">
+          <Article />
         </Route>
 
         <Route path="/categories">
